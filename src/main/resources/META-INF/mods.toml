@@ -21,14 +21,14 @@ authors="EZSlam18, Rumgie" #optional
 
 description='''Learning with Monkeys'''
 
-[[dependencies.examplemod]] #recommended
+[[dependencies.monkeybusiness]] #recommended
     modId="forge"
     mandatory=true
     versionRange="[61,)"
     ordering="NONE"
     side="BOTH"
 
-[[dependencies.examplemod]] #recommended
+[[dependencies.monkeybusiness]] #recommended
     modId="minecraft"
     mandatory=true
     versionRange="[1.21.11,1.22,)"

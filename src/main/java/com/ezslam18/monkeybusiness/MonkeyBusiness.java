@@ -1,6 +1,8 @@
 package com.ezslam18.monkeybusiness;
 
+import com.ezslam18.monkeybusiness.item.ModItems;
 import com.mojang.logging.LogUtils;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.eventbus.api.listener.SubscribeEvent;
@@ -26,6 +28,8 @@ public final class MonkeyBusiness {
         // Register the commonSetup method for modloading
         FMLCommonSetupEvent.getBus(modBusGroup).addListener(this::commonSetup);
 
+        ModItems.register(modBusGroup);
+
         // Register the item to a creative tab
         BuildCreativeModeTabContentsEvent.BUS.addListener(MonkeyBusiness::addCreative);
 
@@ -39,7 +43,9 @@ public final class MonkeyBusiness {
 
     // Add the example block item to the building blocks tab
     private static void addCreative(BuildCreativeModeTabContentsEvent event) {
-
+        if(event.getTabKey() == CreativeModeTabs.FOOD_AND_DRINKS){
+            event.accept(ModItems.BANANA.get());
+        }
     }
 
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
