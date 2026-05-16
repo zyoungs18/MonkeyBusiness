@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "monkeybusiness:monkonium_block"
+  ],
+  "result": {
+    "count": 9,
+    "id": "monkeybusiness:monkonium_ingot"
+  }
+}

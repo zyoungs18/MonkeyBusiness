@@ -1,3 +1,14 @@
 {
-  "item.monkeybusiness.banana": "Banana"
+  "item.monkeybusiness.banana": "Banana",
+  "item.monkeybusiness.dart": "Throwing Dart",
+  "item.monkeybusiness.monkey_maker": "Business Maker",
+  "item.monkeybusiness.banana_block": "Barrel o' Bananas",
+  "item.monkeybusiness.monkonium_ore": "Monkonium Ore",
+  "item.monkeybusiness.monkonium_ingot": "Monkonium Ingot",
+
+  "block.monkeybusiness.monkonium_ore": "Monkonium Ore",
+  "block.monkeybusiness.banana_block": "Barrel o' Bananas",
+  "item.monkeybusiness.monkonium_block": "Monkonium Block",
+
+  "creativetab.monkeybusiness.monkey_business_tab": "Monkey Business"
 }

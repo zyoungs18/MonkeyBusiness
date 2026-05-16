@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.25,
+  "group": "monkonium",
+  "ingredient": "monkeybusiness:monkonium_ore",
+  "result": {
+    "id": "monkeybusiness:monkonium_ingot"
+  }
+}

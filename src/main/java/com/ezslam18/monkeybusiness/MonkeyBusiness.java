@@ -1,9 +1,14 @@
 package com.ezslam18.monkeybusiness;
 
+import com.ezslam18.monkeybusiness.creativetab.ModCreativeTabs;
+import com.ezslam18.monkeybusiness.entity.ModEntities;
 import com.ezslam18.monkeybusiness.item.ModItems;
+import com.ezslam18.monkeybusiness.block.ModBlocks;
 import com.mojang.logging.LogUtils;
+import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.eventbus.api.listener.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -29,6 +34,9 @@ public final class MonkeyBusiness {
         FMLCommonSetupEvent.getBus(modBusGroup).addListener(this::commonSetup);
 
         ModItems.register(modBusGroup);
+        ModBlocks.register(modBusGroup);
+        ModCreativeTabs.register(modBusGroup);
+        ModEntities.register(modBusGroup);
 
         // Register the item to a creative tab
         BuildCreativeModeTabContentsEvent.BUS.addListener(MonkeyBusiness::addCreative);
@@ -46,6 +54,23 @@ public final class MonkeyBusiness {
         if(event.getTabKey() == CreativeModeTabs.FOOD_AND_DRINKS){
             event.accept(ModItems.BANANA.get());
         }
+        if(event.getTabKey() == CreativeModeTabs.COMBAT){
+            event.accept(ModItems.DART.get());
+        }
+        if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS){
+            event.accept(ModBlocks.BANANA_BLOCK.get());
+            event.accept(ModBlocks.MONKONIUM_BLOCK);
+        }
+        if(event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS){
+            event.accept(ModBlocks.MONKONIUM_ORE.get());
+        }
+        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS){
+            event.accept(ModItems.MONKONIUM_INGOT.get());
+        }
+        if(event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES){
+            event.accept(ModItems.MONKEY_MAKER.get());
+        }
+
     }
 
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
@@ -54,6 +79,10 @@ public final class MonkeyBusiness {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
 
+        }
+        @SubscribeEvent
+        public static void registerRenderers(EntityRenderersEvent.RegisterRenderers event) {
+            event.registerEntityRenderer(ModEntities.DART.get(), ThrownItemRenderer::new);
         }
     }
 }

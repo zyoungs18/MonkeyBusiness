@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": "monkeybusiness:monkonium_ingot",
+    "A": "minecraft:arrow"
+  },
+  "pattern": [
+    "AAA",
+    "A#A",
+    "AAA"
+  ],
+  "result": {
+    "count": 16,
+    "id": "monkeybusiness:dart"
+  }
+}
