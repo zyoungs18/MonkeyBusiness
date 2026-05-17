@@ -20,7 +20,7 @@ public class DartProjectile extends ThrowableItemProjectile {
         super.onHitEntity(result);
         result.getEntity().hurt(
                 this.damageSources().thrown(this, this.getOwner()),
-                6.0F
+                10.0F
         );
         this.discard();
     }

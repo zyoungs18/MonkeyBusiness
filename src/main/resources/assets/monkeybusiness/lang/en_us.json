@@ -5,10 +5,17 @@
   "item.monkeybusiness.banana_block": "Barrel o' Bananas",
   "item.monkeybusiness.monkonium_ore": "Monkonium Ore",
   "item.monkeybusiness.monkonium_ingot": "Monkonium Ingot",
+  "item.monkeybusiness.bananite_ingot": "Unregistered Bananite Ingot",
+  "item.monkeybusiness.stamped_bananite_ingot": "Official Bananite Ingot",
+  "item.monkeybusiness.monkonium_block": "Monkonium Block",
+  "item.monkeybusiness.bananite_block": "Bananite Block",
+  "item.monkeybusiness.monkey_block": "Monkey Block",
 
   "block.monkeybusiness.monkonium_ore": "Monkonium Ore",
   "block.monkeybusiness.banana_block": "Barrel o' Bananas",
-  "item.monkeybusiness.monkonium_block": "Monkonium Block",
+  "block.monkeybusiness.monkonium_block": "Monkonium Block",
+  "block.monkeybusiness.bananite_block": "Bananite Block",
+  "block.monkeybusiness.monkey_block": "Monkey Block",
 
   "creativetab.monkeybusiness.monkey_business_tab": "Monkey Business"
 }

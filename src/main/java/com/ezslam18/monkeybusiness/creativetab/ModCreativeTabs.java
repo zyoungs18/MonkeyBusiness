@@ -24,12 +24,16 @@ public class ModCreativeTabs {
                         output.accept(ModItems.BANANA.get());
                         output.accept(ModItems.DART.get());
                         output.accept(ModItems.MONKONIUM_INGOT.get());
+                        output.accept(ModItems.BANANITE_INGOT.get());
+                        output.accept(ModItems.STAMPED_BANANITE_INGOT.get());
                         output.accept(ModItems.MONKEY_MAKER.get());
 
                         // BLOCKS
                         output.accept(ModBlocks.BANANA_BLOCK.get());
                         output.accept(ModBlocks.MONKONIUM_ORE.get());
                         output.accept(ModBlocks.MONKONIUM_BLOCK.get());
+                        output.accept(ModBlocks.BANANITE_BLOCK.get());
+                        output.accept(ModBlocks.MONKEY_BLOCK.get());
                     })
                     .build()
             );

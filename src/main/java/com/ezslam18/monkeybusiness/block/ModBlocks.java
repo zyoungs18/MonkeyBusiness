@@ -1,12 +1,14 @@
 package com.ezslam18.monkeybusiness.block;
 
 import com.ezslam18.monkeybusiness.MonkeyBusiness;
+import com.ezslam18.monkeybusiness.block.custom.MonkeyBlock;
 import com.ezslam18.monkeybusiness.item.ModItems;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.DropExperienceBlock;
+import net.minecraft.world.level.block.MagmaBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.MapColor;
@@ -44,8 +46,20 @@ public class ModBlocks {
                     .sound(SoundType.METAL)
                     .lightLevel(state -> 5)
             ));
-
-
+    public static final RegistryObject<Block> BANANITE_BLOCK = registerBlock("bananite_block",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .setId(BLOCKS.key("bananite_block"))
+                    .strength(20.0f)
+                    .requiresCorrectToolForDrops()
+                    .sound(SoundType.METAL)
+                    .lightLevel(state -> 15)
+            ));
+    public static final RegistryObject<Block> MONKEY_BLOCK = registerBlock("monkey_block",
+            () -> new MonkeyBlock(BlockBehaviour.Properties.of()
+                    .setId(BLOCKS.key("monkey_block"))
+                    .strength(2.0f)
+                    .sound(SoundType.AMETHYST)
+            ));
 
 
 

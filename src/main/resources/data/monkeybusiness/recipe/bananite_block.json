@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "bananite",
+  "key": {
+    "#": "monkeybusiness:stamped_bananite_ingot"
+  },
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "result": {
+    "count": 1,
+    "id": "monkeybusiness:bananite_block"
+  }
+}
